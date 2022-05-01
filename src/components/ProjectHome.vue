@@ -14,16 +14,14 @@
         <section id="section-one" ref="section">
             <div class="left" ref="left">
                 <div class="show-text">
-                    <h3>我的项目</h3>
-                    <p>
-                        学习前端以来，自己做的一些项目，也算是对自己学习能力的考验。但这些我并不认为它是我学习的成果，而是我成长的历程。。。
-                    </p>
+                    <h3>回忆录😜</h3>
+                    <p>是一些个小项目，更是一段成长历程。。。</p>
                 </div>
                 <button @click="open(1)">TOUCH</button>
             </div>
             <div class="mid" ref="mid">
                 <div v-if="flag === 1">
-                    <h3 class="title">我的项目</h3>
+                    <h3 class="title">历程</h3>
                     <div class="list-all">
                         <ProjectItem
                             v-for="item in projectIntr"
@@ -37,7 +35,7 @@
                     <div class="about-con">
                         <ul class="about-text">
                             <li>热爱旅行，热爱技术；</li>
-                            <li>目标坐标杭州；</li>
+                            <li>坐标杭州；</li>
                             <li>
                                 博客里是我日常学习的一些总结，若有不足，欢迎指正。
                             </li>
@@ -99,45 +97,65 @@ export default {
     data() {
         return {
             projectIntr: [
+                // {
+                //     id: 1,
+                //     title: "Conlate",
+                //     content:
+                //         "使用 BootStrap 栅格系统进行排版布局，使用 Swiper 和 animate 插件分别制作轮播图和动画效果，采用 JQuery 编写交互效果。",
+                //     link: "https://bcdxc.github.io/Conlate/",
+                //     imgSrc: "conlate",
+                // },
+                // {
+                //     id: 2,
+                //     title: "GP",
+                //     content:
+                //         "效仿和平精英官网制作，Flex 弹性盒子布局，JavaScript 原生编写交互效果。",
+                //     link: "https://bcdxc.github.io/MyPUBG/",
+                //     imgSrc: "gp",
+                // },
                 {
                     id: 1,
-                    title: "Conlate",
+                    title: "Aruk（一个仿写的静态官网）",
                     content:
-                        "使用 BootStrap 栅格系统进行排版布局，使用 Swiper 和 animate 插件分别制作轮播图和动画效果，采用 JQuery 编写交互效果。",
-                    link: "https://bcdxc.github.io/Conlate/",
-                    imgSrc: "conlate",
+                        "大学时，接触了html、css和JS，做的个练手项目，当时自我感觉还很不错😄。使用 Swiper 和 animate 插件分别制作轮播图和动画效果，代码使用 JQuery 和 原生 JavaScript 编写。",
+                    link: "https://bcdxc.github.io/MyAruk/",
+                    imgSrc: "aruk",
+                    time: "2020.09",
                 },
                 {
                     id: 2,
-                    title: "GP",
+                    title: "Albatross",
                     content:
-                        "效仿和平精英官网制作，Flex 弹性盒子布局，JavaScript 原生编写交互效果。",
-                    link: "https://bcdxc.github.io/MyPUBG/",
-                    imgSrc: "gp",
+                        "Vue之后的第一个练手项目，（接口来自cnode），一个 NodeJS 论坛项目。丑陋的UI来自我精心的设计（如果你觉得还不算丑，可能是你没有见过第一版🐷，小清新的配色是永远的神）。使用 Vue 框架以及 vue-router 和 vuex 制作，axios 请求数据， ElementUI 库。",
+                    link: "https://bcdxc.github.io/Albatross/#/",
+                    imgSrc: "albatross",
+                    time: "2020.11",
                 },
                 {
                     id: 3,
-                    title: "Aruk",
+                    title: "Yiguo",
                     content:
-                        "使用 Swiper 和 animate 插件分别制作轮播图和动画效果，代码使用 JQuery 和 原生 JavaScript 编写。",
-                    link: "https://bcdxc.github.io/MyAruk/",
-                    imgSrc: "aruk",
+                        "我的毕业设计，一个微信小程序项目。2021年4月份花了整整一周的时间写的，每天从早上7点多写到到晚上1点，不要问为什么，问就是答辩来不及了🙃。很累，很充实，垒功能感觉真的很爽，记忆尤新，恍如昨日。只是数据都是模拟的，等我node差不多了高低得完善一下子。使用 iView 组件库，原生小程序框架编写，管理平台使用 Vue 框架与 ElementUI 组件库，axios 请求数据。",
+                    link: "https://github.com/bcdxc/yiguo",
+                    imgSrc: "yiguo",
+                    time: "2021.04",
                 },
                 {
                     id: 4,
-                    title: "Albatross",
+                    title: "otter项目",
                     content:
-                        "一个 JavaScript 论坛项目，使用 Vue 框架以及 vue-router 和 vuex 制作，axios 请求数据，使用 ElementUI 库。",
-                    link: "https://bcdxc.github.io/Albatross/#/",
-                    imgSrc: "albatross",
+                        "正式工作以后，前端组就我一个人，说实话挑战很大。这么长的时间算下来大大小小接触了很多个项目，是真的觉得成长了不少。从一开始的钉钉小程序、数据大屏...到后来的教师端、备课系统等等。从第一次写比较简单的公共组件到后面些许复杂的文件夹组件，逐渐丰富的功能伴随着一次次的重构完善，乐此不疲。",
+                    link: "https://www.otter-nxedu.com/teacher",
+                    imgSrc: "",
+                    time: "2021.06.30-2022.04.29",
                 },
                 {
                     id: 5,
-                    title: "Yiguo",
-                    content:
-                        "一个微信小程序项目，使用 iView 组件库，原生小程序框架编写，管理平台使用 Vue 框架与 ElementUI 组件库，axios 请求数据。",
-                    link: "https://github.com/bcdxc/yiguo",
-                    imgSrc: "yiguo",
+                    title: "vue2-drag-directive",
+                    content: "在项目开发中，公共出来的基于 vue.js 2.x 的拖动指令，兼容移动端。使用方法或一些API详见GitHub 或 NPM。",
+                    link: "https://www.otter-nxedu.com/teacher",
+                    imgSrc: "",
+                    time: "2022.03",
                 },
             ],
             flag: 1,
@@ -374,7 +392,7 @@ export default {
         z-index: 100;
         color: #000;
         background-color: #f5f3f3;
-        padding: 16px;
+        padding: 16px 40px;
         display: flex;
         flex-direction: column;
         align-items: center;

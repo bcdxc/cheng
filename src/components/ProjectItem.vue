@@ -2,8 +2,11 @@
     <div class="project-item">
         <a class="my-link" target="_blank" :href="item.link"></a>
         <h3>{{ `0${item.id}  ${item.title}` }}</h3>
-        <p class="content">{{ item.content }}</p>
-        <img :src="require(`../assets/images/${item.imgSrc}.png`)" alt="" />
+        <div class="container">
+            <p class="content">{{ item.content }}</p>
+            <img v-if="item.imgSrc" :src="require(`../assets/images/${item.imgSrc}.png`)" alt="" />
+        </div>
+        <span class="time">{{ item.time }}</span>
     </div>
 </template>
 
@@ -20,13 +23,15 @@ export default {
 
 <style lang="less" scoped>
 .project-item {
-    width: 360px;
-    height: 300px;
+    // width: 360px;
+    // height: 300px;
+    width: 100%;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #000;
-    padding: 12px;
+    padding: 12px 15px;
     margin-bottom: 30px;
     user-select: none;
     border-radius: 5px;
@@ -46,19 +51,32 @@ export default {
         right: 0;
     }
     h3 {
+        width: 100%;
         font-size: 24px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         color: #2c405a;
+        text-align: left;
     }
-    p {
-        margin-bottom: 12px;
-        font-size: 18px;
-        text-indent: 30px;
-        color: #3b4f6a;
+    .container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        p {
+            margin: 0 15px 12px 0;
+            font-size: 18px;
+            text-indent: 30px;
+            color: #3b4f6a;
+        }
+        img {
+            width: auto;
+            height: 80px;
+        }
     }
-    img {
-        width: 100px;
-        height: auto;
+    .time {
+        position: absolute;
+        right: 22px;
+        bottom: 10px;
+        opacity: .6;
     }
 }
 </style>
