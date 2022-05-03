@@ -153,7 +153,7 @@ export default {
                     id: 5,
                     title: "vue2-drag-directive",
                     content: "在项目开发中，公共出来的基于 vue.js 2.x 的拖动指令，兼容移动端。使用方法或一些API详见GitHub 或 NPM。",
-                    link: "https://www.otter-nxedu.com/teacher",
+                    link: "https://www.npmjs.com/package/vue2-drag-directive",
                     imgSrc: "",
                     time: "2022.03",
                 },
